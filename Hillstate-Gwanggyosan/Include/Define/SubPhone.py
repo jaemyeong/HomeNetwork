@@ -209,19 +209,39 @@ class SubPhone(Device):
         doorlock = kwargs.get('doorlock')
         if doorlock is not None:
             self.state_doorlock = StateDoorLock(doorlock)
+            self.state_ringing = StateRinging.IDLE
+            self.state_ringing_front = 0
+            self.state_ringring_communal = 0
+            
             self.publishMQTT()
+
+            self.state_ringing_prev = self.state_ringing
+            self.state_ringing_front_prev = self.state_ringing_front
+            self.state_ringring_communal_prev = self.state_ringring_communal
             # writeLog(f"DoorLock: {self.state_doorlock.name}", self)
 
         lock_front = kwargs.get('lock_front')
         if lock_front is not None:
             self.state_lock_front = StateDoorLock(lock_front)
+            self.state_ringing = StateRinging.IDLE
+            self.state_ringing_front = 0
+            
             self.publishMQTT()
+
+            self.state_ringing_prev = self.state_ringing
+            self.state_ringing_front_prev = self.state_ringing_front
             writeLog(f"Lock Front: {self.state_lock_front.name}", self)
 
         lock_communal = kwargs.get('lock_communal')
         if lock_communal is not None:
             self.state_lock_communal = StateDoorLock(lock_communal)
+            self.state_ringing = StateRinging.IDLE
+            self.state_ringring_communal = 0
+            
             self.publishMQTT()
+
+            self.state_ringing_prev = self.state_ringing
+            self.state_ringring_communal_prev = self.state_ringring_communal
             writeLog(f"Lock Communal: {self.state_lock_communal.name}", self)
         
         if not self.init:
