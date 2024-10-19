@@ -1,0 +1,1038 @@
+{
+    "bridge": {
+        "name": "Homebridge 349E",
+        "username": "XX:XX:XX:XX:XX:XX",
+        "port": 51332,
+        "pin": "xxx-xx-xxx"
+    },
+    "accessories": [
+        {
+            "accessory": "mqttthing",
+            "type": "switch",
+            "name": "Livingroom Light 1 (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getOn": {
+                    "topic": "home/state/light/1/0",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setOn": {
+                    "topic": "home/command/light/1/0",
+                    "apply": "return JSON.stringify({state: message});"
+                }
+            },
+            "integerValue": true,
+            "onValue": 1,
+            "offValue": 0,
+            "history": true,
+            "logMqtt": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "switch",
+            "name": "Livingroom Light 2 (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getOn": {
+                    "topic": "home/state/light/1/1",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setOn": {
+                    "topic": "home/command/light/1/1",
+                    "apply": "return JSON.stringify({state: message});"
+                }
+            },
+            "integerValue": true,
+            "onValue": 1,
+            "offValue": 0,
+            "history": true,
+            "logMqtt": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "switch",
+            "name": "Hallway Light (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getOn": {
+                    "topic": "home/state/light/1/2",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setOn": {
+                    "topic": "home/command/light/1/2",
+                    "apply": "return JSON.stringify({state: message});"
+                }
+            },
+            "integerValue": true,
+            "onValue": 1,
+            "offValue": 0,
+            "history": true,
+            "logMqtt": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "switch",
+            "name": "Bedroom Light (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getOn": {
+                    "topic": "home/state/light/2/0",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setOn": {
+                    "topic": "home/command/light/2/0",
+                    "apply": "return JSON.stringify({state: message});"
+                }
+            },
+            "integerValue": true,
+            "onValue": 1,
+            "offValue": 0,
+            "history": true,
+            "logMqtt": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "switch",
+            "name": "Outdoor Unit Room Light (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getOn": {
+                    "topic": "home/state/light/2/1",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setOn": {
+                    "topic": "home/command/light/2/1",
+                    "apply": "return JSON.stringify({state: message});"
+                }
+            },
+            "integerValue": true,
+            "onValue": 1,
+            "offValue": 0,
+            "history": true,
+            "logMqtt": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "switch",
+            "name": "Library Light (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getOn": {
+                    "topic": "home/state/light/3/0",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setOn": {
+                    "topic": "home/command/light/3/0",
+                    "apply": "return JSON.stringify({state: message});"
+                }
+            },
+            "integerValue": true,
+            "onValue": 1,
+            "offValue": 0,
+            "history": true,
+            "logMqtt": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "switch",
+            "name": "PCRoom Light (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getOn": {
+                    "topic": "home/state/light/4/0",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setOn": {
+                    "topic": "home/command/light/4/0",
+                    "apply": "return JSON.stringify({state: message});"
+                }
+            },
+            "integerValue": true,
+            "onValue": 1,
+            "offValue": 0,
+            "history": true,
+            "logMqtt": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "switch",
+            "name": "Table Light (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getOn": {
+                    "topic": "home/state/light/6/0",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setOn": {
+                    "topic": "home/command/light/6/0",
+                    "apply": "return JSON.stringify({state: message});"
+                }
+            },
+            "integerValue": true,
+            "onValue": 1,
+            "offValue": 0,
+            "history": true,
+            "logMqtt": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "switch",
+            "name": "Countertop Light (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getOn": {
+                    "topic": "home/state/light/6/1",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setOn": {
+                    "topic": "home/command/light/6/1",
+                    "apply": "return JSON.stringify({state: message});"
+                }
+            },
+            "integerValue": true,
+            "onValue": 1,
+            "offValue": 0,
+            "history": true,
+            "logMqtt": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "outlet",
+            "name": "Living room Outlet1 (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getOn": {
+                    "topic": "home/state/outlet/1/0",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setOn": {
+                    "topic": "home/command/outlet/1/0",
+                    "apply": "return JSON.stringify({state: message});"
+                }
+            },
+            "onValue": 1,
+            "offValue": 0,
+            "integerValue": false,
+            "history": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "outlet",
+            "name": "Living room Outlet2 (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getOn": {
+                    "topic": "home/state/outlet/1/1",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setOn": {
+                    "topic": "home/command/outlet/1/1",
+                    "apply": "return JSON.stringify({state: message});"
+                }
+            },
+            "onValue": 1,
+            "offValue": 0,
+            "integerValue": false,
+            "history": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "outlet",
+            "name": "Bedroom Outlet1 (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getOn": {
+                    "topic": "home/state/outlet/2/0",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setOn": {
+                    "topic": "home/command/outlet/2/0",
+                    "apply": "return JSON.stringify({state: message});"
+                }
+            },
+            "onValue": 1,
+            "offValue": 0,
+            "integerValue": false,
+            "history": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "outlet",
+            "name": "Bedroom Outlet2 (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getOn": {
+                    "topic": "home/state/outlet/2/1",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setOn": {
+                    "topic": "home/command/outlet/2/1",
+                    "apply": "return JSON.stringify({state: message});"
+                }
+            },
+            "onValue": 1,
+            "offValue": 0,
+            "integerValue": false,
+            "history": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "outlet",
+            "name": "Library Outlet1 (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getOn": {
+                    "topic": "home/state/outlet/3/0",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setOn": {
+                    "topic": "home/command/outlet/3/0",
+                    "apply": "return JSON.stringify({state: message});"
+                }
+            },
+            "onValue": 1,
+            "offValue": 0,
+            "integerValue": false,
+            "history": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "outlet",
+            "name": "Library Outlet2 (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getOn": {
+                    "topic": "home/state/outlet/3/1",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setOn": {
+                    "topic": "home/command/outlet/3/1",
+                    "apply": "return JSON.stringify({state: message});"
+                }
+            },
+            "onValue": 1,
+            "offValue": 0,
+            "integerValue": false,
+            "history": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "outlet",
+            "name": "PC room Outlet1 (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getOn": {
+                    "topic": "home/state/outlet/4/0",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setOn": {
+                    "topic": "home/command/outlet/4/0",
+                    "apply": "return JSON.stringify({state: message});"
+                }
+            },
+            "onValue": 1,
+            "offValue": 0,
+            "integerValue": false,
+            "history": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "outlet",
+            "name": "PC room Outlet2 (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getOn": {
+                    "topic": "home/state/outlet/4/1",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setOn": {
+                    "topic": "home/command/outlet/4/1",
+                    "apply": "return JSON.stringify({state: message});"
+                }
+            },
+            "onValue": 1,
+            "offValue": 0,
+            "integerValue": false,
+            "history": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "outlet",
+            "name": "Kitchen Outlet1 (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getOn": {
+                    "topic": "home/state/outlet/6/0",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setOn": {
+                    "topic": "home/command/outlet/6/0",
+                    "apply": "return JSON.stringify({state: message});"
+                }
+            },
+            "onValue": 1,
+            "offValue": 0,
+            "integerValue": false,
+            "history": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "outlet",
+            "name": "Kitchen Outlet2 (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getOn": {
+                    "topic": "home/state/outlet/6/1",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setOn": {
+                    "topic": "home/command/outlet/6/1",
+                    "apply": "return JSON.stringify({state: message});"
+                }
+            },
+            "onValue": 1,
+            "offValue": 0,
+            "integerValue": false,
+            "history": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "valve",
+            "valveType": "faucet",
+            "name": "Gas Valve (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "setActive": {
+                    "topic": "home/command/gasvalve/0/0",
+                    "apply": "return JSON.stringify({state: message});"
+                },
+                "getActive": {
+                    "topic": "home/state/gasvalve/0/0",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "getInUse": {
+                    "topic": "home/state/gasvalve/0/0",
+                    "apply": "return JSON.parse(message).state;"
+                }
+            },
+            "integerValue": true,
+            "onValue": 1,
+            "offValue": 0,
+            "logMqtt": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "thermostat",
+            "name": "Livingroom Thermostat (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getCurrentHeatingCoolingState": {
+                    "topic": "home/state/thermostat/1/0",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setTargetHeatingCoolingState": {
+                    "topic": "home/command/thermostat/1/0",
+                    "apply": "return JSON.stringify({state: message});"
+                },
+                "getTargetHeatingCoolingState": {
+                    "topic": "home/state/thermostat/1/0",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "getCurrentTemperature": {
+                    "topic": "home/state/thermostat/1/0",
+                    "apply": "return JSON.parse(message).currentTemperature;"
+                },
+                "setTargetTemperature": {
+                    "topic": "home/command/thermostat/1/0",
+                    "apply": "return JSON.stringify({targetTemperature: message});"
+                },
+                "getTargetTemperature": {
+                    "topic": "home/state/thermostat/1/0",
+                    "apply": "return JSON.parse(message).targetTemperature;"
+                }
+            },
+            "minTemperature": 18,
+            "maxTemperature": 30,
+            "restrictHeatingCoolingState": [
+                0,
+                1
+            ],
+            "logMqtt": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "thermostat",
+            "name": "Bedroom Thermostat (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getCurrentHeatingCoolingState": {
+                    "topic": "home/state/thermostat/2/0",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setTargetHeatingCoolingState": {
+                    "topic": "home/command/thermostat/2/0",
+                    "apply": "return JSON.stringify({state: message});"
+                },
+                "getTargetHeatingCoolingState": {
+                    "topic": "home/state/thermostat/2/0",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "getCurrentTemperature": {
+                    "topic": "home/state/thermostat/2/0",
+                    "apply": "return JSON.parse(message).currentTemperature;"
+                },
+                "setTargetTemperature": {
+                    "topic": "home/command/thermostat/2/0",
+                    "apply": "return JSON.stringify({targetTemperature: message});"
+                },
+                "getTargetTemperature": {
+                    "topic": "home/state/thermostat/2/0",
+                    "apply": "return JSON.parse(message).targetTemperature;"
+                }
+            },
+            "minTemperature": 18,
+            "maxTemperature": 30,
+            "restrictHeatingCoolingState": [
+                0,
+                1
+            ],
+            "logMqtt": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "thermostat",
+            "name": "Library Thermostat (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getCurrentHeatingCoolingState": {
+                    "topic": "home/state/thermostat/3/0",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setTargetHeatingCoolingState": {
+                    "topic": "home/command/thermostat/3/0",
+                    "apply": "return JSON.stringify({state: message});"
+                },
+                "getTargetHeatingCoolingState": {
+                    "topic": "home/state/thermostat/3/0",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "getCurrentTemperature": {
+                    "topic": "home/state/thermostat/3/0",
+                    "apply": "return JSON.parse(message).currentTemperature;"
+                },
+                "setTargetTemperature": {
+                    "topic": "home/command/thermostat/3/0",
+                    "apply": "return JSON.stringify({targetTemperature: message});"
+                },
+                "getTargetTemperature": {
+                    "topic": "home/state/thermostat/3/0",
+                    "apply": "return JSON.parse(message).targetTemperature;"
+                }
+            },
+            "minTemperature": 18,
+            "maxTemperature": 30,
+            "restrictHeatingCoolingState": [
+                0,
+                1
+            ],
+            "logMqtt": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "thermostat",
+            "name": "PC Room Thermostat (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getCurrentHeatingCoolingState": {
+                    "topic": "home/state/thermostat/4/0",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setTargetHeatingCoolingState": {
+                    "topic": "home/command/thermostat/4/0",
+                    "apply": "return JSON.stringify({state: message});"
+                },
+                "getTargetHeatingCoolingState": {
+                    "topic": "home/state/thermostat/4/0",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "getCurrentTemperature": {
+                    "topic": "home/state/thermostat/4/0",
+                    "apply": "return JSON.parse(message).currentTemperature;"
+                },
+                "setTargetTemperature": {
+                    "topic": "home/command/thermostat/4/0",
+                    "apply": "return JSON.stringify({targetTemperature: message});"
+                },
+                "getTargetTemperature": {
+                    "topic": "home/state/thermostat/4/0",
+                    "apply": "return JSON.parse(message).targetTemperature;"
+                }
+            },
+            "minTemperature": 18,
+            "maxTemperature": 30,
+            "restrictHeatingCoolingState": [
+                0,
+                1
+            ],
+            "logMqtt": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "fan",
+            "name": "Ventilator (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "caption": "Ventilator(MQTT)",
+            "topics": {
+                "getOn": {
+                    "topic": "home/state/ventilator/0/0",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setOn": {
+                    "topic": "home/command/ventilator/0/0",
+                    "apply": "return JSON.stringify({state: message});"
+                },
+                "getRotationSpeed": {
+                    "topic": "home/state/ventilator/0/0",
+                    "apply": "return JSON.parse(message).rotationspeed;"
+                },
+                "setRotationSpeed": {
+                    "topic": "home/command/ventilator/0/0",
+                    "apply": "return JSON.stringify({rotationspeed: message});"
+                }
+            },
+            "integerValue": true,
+            "logMqtt": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "heaterCooler",
+            "name": "Livingroom AirConditioner (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getActive": {
+                    "topic": "home/state/airconditioner/1/0",
+                    "apply": "return JSON.parse(message).active;"
+                },
+                "setActive": {
+                    "topic": "home/command/airconditioner/1/0",
+                    "apply": "return JSON.stringify({active: message});"
+                },
+                "getCurrentHeaterCoolerState": {
+                    "topic": "home/state/airconditioner/1/0",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setTargetHeaterCoolerState": {
+                    "topic": "home/command/airconditioner/1/0",
+                    "apply": "return JSON.stringify({target_state: message});"
+                },
+                "getTargetHeaterCoolerState": {
+                    "topic": "home/state/airconditioner/1/0",
+                    "apply": "return JSON.parse(message).target_state;"
+                },
+                "getRotationSpeed": {
+                    "topic": "home/state/airconditioner/1/0",
+                    "apply": "return JSON.parse(message).rotationspeed;"
+                },
+                "setRotationSpeed": {
+                    "topic": "home/command/airconditioner/1/0",
+                    "apply": "return JSON.stringify({rotationspeed: message});"
+                },
+                "getCurrentTemperature": {
+                    "topic": "home/state/airconditioner/1/0",
+                    "apply": "return JSON.parse(message).currentTemperature;"
+                },
+                "getCoolingThresholdTemperature": {
+                    "topic": "home/state/airconditioner/1/0",
+                    "apply": "return JSON.parse(message).targetTemperature;"
+                },
+                "setCoolingThresholdTemperature": {
+                    "topic": "home/command/airconditioner/1/0",
+                    "apply": "return JSON.stringify({targetTemperature: message});"
+                }
+            },
+            "integerValue": true,
+            "minTemperature": 18,
+            "maxTemperature": 30,
+            "restrictHeaterCoolerState": [
+                2
+            ],
+            "logMqtt": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "heaterCooler",
+            "name": "Bedroom AirConditioner (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getActive": {
+                    "topic": "home/state/airconditioner/2/0",
+                    "apply": "return JSON.parse(message).active;"
+                },
+                "setActive": {
+                    "topic": "home/command/airconditioner/2/0",
+                    "apply": "return JSON.stringify({active: message});"
+                },
+                "getCurrentHeaterCoolerState": {
+                    "topic": "home/state/airconditioner/2/0",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setTargetHeaterCoolerState": {
+                    "topic": "home/command/airconditioner/2/0",
+                    "apply": "return JSON.stringify({target_state: message});"
+                },
+                "getTargetHeaterCoolerState": {
+                    "topic": "home/state/airconditioner/2/0",
+                    "apply": "return JSON.parse(message).target_state;"
+                },
+                "getRotationSpeed": {
+                    "topic": "home/state/airconditioner/2/0",
+                    "apply": "return JSON.parse(message).rotationspeed;"
+                },
+                "setRotationSpeed": {
+                    "topic": "home/command/airconditioner/2/0",
+                    "apply": "return JSON.stringify({rotationspeed: message});"
+                },
+                "getCurrentTemperature": {
+                    "topic": "home/state/airconditioner/2/0",
+                    "apply": "return JSON.parse(message).currentTemperature;"
+                },
+                "getCoolingThresholdTemperature": {
+                    "topic": "home/state/airconditioner/2/0",
+                    "apply": "return JSON.parse(message).targetTemperature;"
+                },
+                "setCoolingThresholdTemperature": {
+                    "topic": "home/command/airconditioner/2/0",
+                    "apply": "return JSON.stringify({targetTemperature: message});"
+                }
+            },
+            "integerValue": true,
+            "minTemperature": 18,
+            "maxTemperature": 30,
+            "restrictHeaterCoolerState": [
+                2
+            ],
+            "logMqtt": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "heaterCooler",
+            "name": "Library AirConditioner (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getActive": {
+                    "topic": "home/state/airconditioner/3/0",
+                    "apply": "return JSON.parse(message).active;"
+                },
+                "setActive": {
+                    "topic": "home/command/airconditioner/3/0",
+                    "apply": "return JSON.stringify({active: message});"
+                },
+                "getCurrentHeaterCoolerState": {
+                    "topic": "home/state/airconditioner/3/0",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setTargetHeaterCoolerState": {
+                    "topic": "home/command/airconditioner/3/0",
+                    "apply": "return JSON.stringify({target_state: message});"
+                },
+                "getTargetHeaterCoolerState": {
+                    "topic": "home/state/airconditioner/3/0",
+                    "apply": "return JSON.parse(message).target_state;"
+                },
+                "getRotationSpeed": {
+                    "topic": "home/state/airconditioner/3/0",
+                    "apply": "return JSON.parse(message).rotationspeed;"
+                },
+                "setRotationSpeed": {
+                    "topic": "home/command/airconditioner/3/0",
+                    "apply": "return JSON.stringify({rotationspeed: message});"
+                },
+                "getCurrentTemperature": {
+                    "topic": "home/state/airconditioner/3/0",
+                    "apply": "return JSON.parse(message).currentTemperature;"
+                },
+                "getCoolingThresholdTemperature": {
+                    "topic": "home/state/airconditioner/3/0",
+                    "apply": "return JSON.parse(message).targetTemperature;"
+                },
+                "setCoolingThresholdTemperature": {
+                    "topic": "home/command/airconditioner/3/0",
+                    "apply": "return JSON.stringify({targetTemperature: message});"
+                }
+            },
+            "integerValue": true,
+            "minTemperature": 18,
+            "maxTemperature": 30,
+            "restrictHeaterCoolerState": [
+                2
+            ],
+            "logMqtt": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "heaterCooler",
+            "name": "PC Room AirConditioner (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getActive": {
+                    "topic": "home/state/airconditioner/4/0",
+                    "apply": "return JSON.parse(message).active;"
+                },
+                "setActive": {
+                    "topic": "home/command/airconditioner/4/0",
+                    "apply": "return JSON.stringify({active: message});"
+                },
+                "getCurrentHeaterCoolerState": {
+                    "topic": "home/state/airconditioner/4/0",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setTargetHeaterCoolerState": {
+                    "topic": "home/command/airconditioner/4/0",
+                    "apply": "return JSON.stringify({target_state: message});"
+                },
+                "getTargetHeaterCoolerState": {
+                    "topic": "home/state/airconditioner/4/0",
+                    "apply": "return JSON.parse(message).target_state;"
+                },
+                "getRotationSpeed": {
+                    "topic": "home/state/airconditioner/4/0",
+                    "apply": "return JSON.parse(message).rotationspeed;"
+                },
+                "setRotationSpeed": {
+                    "topic": "home/command/airconditioner/4/0",
+                    "apply": "return JSON.stringify({rotationspeed: message});"
+                },
+                "getCurrentTemperature": {
+                    "topic": "home/state/airconditioner/4/0",
+                    "apply": "return JSON.parse(message).currentTemperature;"
+                },
+                "getCoolingThresholdTemperature": {
+                    "topic": "home/state/airconditioner/4/0",
+                    "apply": "return JSON.parse(message).targetTemperature;"
+                },
+                "setCoolingThresholdTemperature": {
+                    "topic": "home/command/airconditioner/4/0",
+                    "apply": "return JSON.stringify({targetTemperature: message});"
+                }
+            },
+            "integerValue": true,
+            "minTemperature": 18,
+            "maxTemperature": 30,
+            "restrictHeaterCoolerState": [
+                2
+            ],
+            "logMqtt": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "switch",
+            "name": "Elevator Call Downside (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getOn": {
+                    "topic": "home/state/elevator/0/0",
+                    "apply": "return (JSON.parse(message).state == 6);"
+                },
+                "setOn": {
+                    "topic": "home/command/elevator/0/0",
+                    "apply": "return JSON.stringify({state: 6});"
+                }
+            },
+            "integerValue": true,
+            "onValue": 1,
+            "offValue": 0,
+            "logMqtt": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "occupancySensor",
+            "name": "Elevator Arrived (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getOccupancyDetected": {
+                    "topic": "home/state/elevator/0/0",
+                    "apply": "return (JSON.parse(message).state == 1);"
+                }
+            },
+            "integerValue": true,
+            "onValue": 1,
+            "offValue": 0,
+            "logMqtt": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "lockMechanism",
+            "name": "Doorlock (MQTT)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getLockCurrentState": {
+                    "topic": "home/state/doorlock/0/0",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "getLockTargetState": {
+                    "topic": "home/state/doorlock/0/0",
+                    "apply": "return JSON.parse(message).state;"
+                },
+                "setLockTargetState": {
+                    "topic": "home/command/doorlock/0/0",
+                    "apply": "return JSON.stringify({state: message});"
+                }
+            },
+            "lockValues": [
+                "Unsecured",
+                "Secured",
+                "Jammed",
+                "Unknown"
+            ],
+            "logMqtt": true
+        },
+        {
+            "accessory": "mqttthing",
+            "type": "airQualitySensor",
+            "name": "Air Quality Sensor (Outer)",
+            "url": "mosquitto broker url",
+            "username": "mosquitto auth id",
+            "password": "mosquitto auth password",
+            "topics": {
+                "getAirQuality": {
+                    "topic": "home/state/airquality/0/0",
+                    "apply": "return JSON.parse(message).grade;"
+                },
+                "getPM10Density": {
+                    "topic": "home/state/airquality/0/0",
+                    "apply": "return JSON.parse(message).pm10;"
+                },
+                "getPM2_5Density": {
+                    "topic": "home/state/airquality/0/0",
+                    "apply": "return JSON.parse(message).pm25;"
+                },
+                "getOzoneDensity": {
+                    "topic": "home/state/airquality/0/0",
+                    "apply": "return JSON.parse(message).o3;"
+                },
+                "getNitrogenDioxideDensity": {
+                    "topic": "home/state/airquality/0/0",
+                    "apply": "return JSON.parse(message).no2;"
+                },
+                "getSulphurDioxideDensity": {
+                    "topic": "home/state/airquality/0/0",
+                    "apply": "return JSON.parse(message).so2;"
+                },
+                "getCarbonMonoxideLevel": {
+                    "topic": "home/state/airquality/0/0",
+                    "apply": "return JSON.parse(message).co;"
+                }
+            },
+            "airQualityValues": [
+                -1,
+                0,
+                1,
+                2,
+                3,
+                4
+            ],
+            "startPub": [
+                {
+                    "topic": "system/command",
+                    "message": "{\"query_all\": 1}"
+                }
+            ],
+            "history": false,
+            "room2": false,
+            "logMqtt": true
+        }
+    ],
+    "platforms": [
+        {
+            "name": "Config",
+            "port": 8581,
+            "platform": "config"
+        },
+        {
+            "units": "si",
+            "interval": 5,
+            "stations": [
+                {
+                    "nameNow": "Yogyui Weather Station",
+                    "service": "openweathermap",
+                    "key": "Open Weather Map API Key",
+                    "locationGeo": [
+                        37.33294668,
+                        127.0673802
+                    ],
+                    "locationCity": "Yongin, KR",
+                    "language": "en",
+                    "compatibility": "both",
+                    "conditionCategory": "detailed",
+                    "now": true,
+                    "extraHumidity": false
+                }
+            ],
+            "platform": "WeatherPlus"
+        }
+    ]
+}

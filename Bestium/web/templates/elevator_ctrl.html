@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>엘리베이터</h1>
+</div>
+<div>
+    <form method="post" action="/api/elevator_ctrl" enctype="text/plain">
+        <input type="submit" value="CALL(DOWN)" name="command_call_down" style="font-size: 4em;">
+        <input type="submit" value="CALL(UP)" name="command_call_up" style="font-size: 4em;">
+    </form>
+    <br>
+
+    <h1>[ Current Time ] </h1>
+    <h1 id="time">
+        {% if current_time %}
+            {{ current_time }}
+        {% endif %}
+    </h1>
+
+    <h1>[ State ]</h1>
+    <h1 id="state">
+        {% if state %}
+            {{ state }}
+        {% endif %}
+    </h1>    
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script>
+setInterval(function() { $.ajax({
+    url: '/api/elevator_ctrl/update',
+    type: 'POST',
+    success: function(response) {
+        $("#time").html(response["current_time"]);
+        $("#state").html(response["state"]);
+    },
+    error: function(error) {
+        console.log(error);
+    }
+})}, 50);
+</script>
+{% endblock %}
