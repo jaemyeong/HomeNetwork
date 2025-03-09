@@ -67,7 +67,7 @@ try:
 except Exception as e:
     print(f'no <etc> argument ({e})')
 
-home: Home = get_home('Hillstate-Gwanggyosan', args.config_file_path)
+home: Home = get_home('Bestium', args.config_file_path)
 home.initRS485Connection()
 
 
